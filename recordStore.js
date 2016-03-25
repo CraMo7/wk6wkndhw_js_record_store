@@ -1,6 +1,6 @@
 var RecordStore = function(name, city, records){
-  this.name = name.toLowerCase();
-  this.city = city.toLowerCase();
+  this.name = name ? name.toLowerCase() : null;
+  this.city = city ? city.toLowerCase() : null;
   this.records = records || [];
 };
 
