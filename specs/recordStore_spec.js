@@ -18,7 +18,7 @@ describe("Record Store", function(){
     record4 = new Record("Rustie", "Glass Swords", 15.99);
     record5 = new Record("Kanye West", "My Beautiful Dark Twisted Fantasy", 15.99);
     records = [record1, record2, record3, record4, record5];
-    store1 = new RecordStore("Records Records Records Records", "Edinburgh");
+    store1 = new RecordStore("Records Records Records Records", "Edinburgh", 784, records);
   });
   it("should construct with a name", function(){
     assert.equal("records records records records", store1.name);
@@ -34,6 +34,9 @@ describe("Record Store", function(){
     var storeNothingPassedIn = new RecordStore();
     assert.equal(null, storeNothingPassedIn.name);
     assert.equal(null, storeNothingPassedIn.city);
+  });
+  it("should have a balance of money", function(){
+    assert.equal(784, store1.balance);
   });
 
 });
