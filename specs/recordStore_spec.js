@@ -38,5 +38,9 @@ describe("Record Store", function(){
   it("should have a balance of money", function(){
     assert.equal(784, store1.balance);
   });
+  it("should have a list inventory method", function(){
+    assert.deepEqual([record1, record2, record3, record4, record5], store1.listStock());
+  });
+
 
 });
