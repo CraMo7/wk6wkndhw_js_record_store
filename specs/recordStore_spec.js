@@ -49,5 +49,6 @@ describe("Record Store", function(){
   it("should be able to check the stores value, sell prices of all in stock and balance of cash in the stores bank added together", function(){
     assert.equal(store1.totalValue(), 863.95);
   });
+  
 
 });

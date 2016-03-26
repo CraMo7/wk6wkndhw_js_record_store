@@ -27,6 +27,7 @@ RecordStore.prototype.sell = function(recordToSell){
 };
 
 RecordStore.prototype.totalValue = function(){
+  //add quantities to record objects and quantity multiplication to this function
   var prices = this.records.map(function(curr){
     return curr.price
   });
