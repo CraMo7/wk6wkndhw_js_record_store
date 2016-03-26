@@ -26,14 +26,15 @@ RecordStore.prototype.sell = function(recordToSell){
   return null;
 };
 
-// RecordStore.prototype.totalValue = function(){
-//   var storeValue = this.balance;
-//   var prices = this.records.map(function(){
+RecordStore.prototype.totalValue = function(){
+  var prices = this.records.map(function(curr){
+    return curr.price
+  });
 
-//   }, this)
-
-//   return storeValue
-// };
+  return prices.reduce(function(prev, curr){
+    return prev + curr;
+  }, this.balance)
+};
 
 
 
