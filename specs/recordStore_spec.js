@@ -39,8 +39,12 @@ describe("Record Store", function(){
     assert.equal(784, store1.balance);
   });
   it("should have a list inventory method", function(){
-    assert.deepEqual([record1, record2, record3, record4, record5], store1.listStock());
+    assert.deepEqual(store1.listStock(), [record1, record2, record3, record4, record5]);
   });
-
+  it("should have a sell record method", function(){
+    store1.sell(record4);
+    assert.deepEqual(store1.listStock(), [record1, record2, record3, record5]);
+    assert.equal(store1.balance, 799.99)
+  });
 
 });
