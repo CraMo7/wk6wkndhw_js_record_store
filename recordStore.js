@@ -18,7 +18,6 @@ RecordStore.prototype.listStock = function(){
 }
 RecordStore.prototype.sell = function(recordToSell){
   for (var i = 0; i < this.records.length; i++){
-    console.log(this.records[i]);
     if (this.records[i] === recordToSell){
       this.balance += this.records[i].price;
       return this.records.splice(i,1);
@@ -26,6 +25,15 @@ RecordStore.prototype.sell = function(recordToSell){
   };
   return null;
 };
+
+// RecordStore.prototype.totalValue = function(){
+//   var storeValue = this.balance;
+//   var prices = this.records.map(function(){
+
+//   }, this)
+
+//   return storeValue
+// };
 
 
 

@@ -46,5 +46,8 @@ describe("Record Store", function(){
     assert.deepEqual(store1.listStock(), [record1, record2, record3, record5]);
     assert.equal(store1.balance, 799.99)
   });
+  it("should be able to check the stores value, sell prices of all in stock and balance of cash in the stores bank added together", function(){
+    assert.equal(store1.totalValue(), 863.95);
+  });
 
 });
