@@ -1,9 +1,16 @@
 var assert = require("chai").assert;
 var Record = require("../record");
 
+var record1;
+
 describe("Record", function(){
   beforeEach(function(){
-    record1 = new Record("Daft Punk", "Discovery", 15.99)
+    var record1Args = {
+      artist: "Daft Punk",
+      album: "Discovery",
+      price: 15.99
+    };
+    record1 = new Record(record1Args);
   });
   it("should construct with artist attr", function(){
     assert.equal("daft punk", record1.artist);

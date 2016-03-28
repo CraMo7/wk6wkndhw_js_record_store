@@ -1,7 +1,7 @@
-var Record = function(artist, album, price){
-  this.artist = artist.toLowerCase();
-  this.album = album.toLowerCase();
-  this.price = price;
+var Record = function(params){
+  this.artist = params.artist.toLowerCase();
+  this.album = params.album.toLowerCase();
+  this.price = params.price;
 };
 
 
